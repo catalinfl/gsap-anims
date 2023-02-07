@@ -14,11 +14,11 @@ const Circle = () => {
         t1.current = gsap.timeline() 
         .to(".circle", {
           scale: 2,
-          stagger: 0.1
+          stagger: 0.1,
         })
         .to(".circle", {
           stagger: 0.25,
-          x: 100
+          x: 100,
         })
       }, app);
       return () => ctx.revert()
@@ -31,11 +31,13 @@ const Circle = () => {
 
 
   return (
+    <div className="parent">
     <div className="container-circle" ref={app} onClick={() => setReversed(!reversed)}> 
     <div className="circle"> t </div>
     <div className="circle orange"> </div>
     <div className="circle blue"> </div>
     <div className="circle yellow"> </div>
+    </div>
     </div>
     )
 }

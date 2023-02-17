@@ -4,7 +4,11 @@
     width: 100vw;
     height: 100vh;
     align-items: center;
-
+    
+    *::selection {
+        color: none;
+        background: none;            
+    }
     
     .imageContainer {
         border: solid 1px #000;
@@ -13,6 +17,15 @@
 
         .image {
             width: 50vw;
+            height: 50vw;
         }
+
     }
+
+
+    .button {
+        cursor: pointer;
+    }
+    
 }
+

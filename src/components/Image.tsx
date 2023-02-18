@@ -26,7 +26,6 @@ const Image = () => {
     ]
 
     const [count, setCount] = useState<number>(0);
-
     // transition
 
     useLayoutEffect(() => {
@@ -82,6 +81,7 @@ const Image = () => {
         <div className="imageContainer">
             <AiOutlineArrowLeft className="button buttonLeft" onClick={() => prevSlide()}/>
             <img className="image" src={Images[count].src} />
+            <img className="image" src={Images[count+1].src} />
             <AiOutlineArrowRight className="button buttonRight" onClick={() => nextSlide()}/>
         </div>
     </div>
